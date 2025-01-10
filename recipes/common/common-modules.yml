@@ -7,9 +7,9 @@ modules:
     - type: containerfile
       snippets:
         - COPY --from=ghcr.io/ublue-os/main-kernel:41 /tmp/rpms /tmp/rpms/kernel
-    - type: script
-      scripts:
-        - installsignedkernel.sh
+    # - type: script
+    #   scripts:
+    #     - installsignedkernel.sh
 
     - type: containerfile
       snippets:
