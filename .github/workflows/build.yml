@@ -15,6 +15,14 @@ concurrency:
   group: ${{ github.workflow }}-${{ github.ref || github.run_id }}
   cancel-in-progress: true
 jobs:
+  # cosign:
+  #   runs-on: ubuntu-latest
+  #   permissions: {}
+  #   steps:
+  #     - name: Install Cosign
+  #       uses: sigstore/cosign-installer@v3.7.0
+  #       with:
+  #         cosign-release: 'v2.4.1'
   bluebuild:
     name: Build image
     runs-on: ubuntu-latest
