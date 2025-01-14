@@ -13,12 +13,13 @@ modules:
 
     - type: containerfile
       snippets:
-        - RUN rpm-ostree install just powerstat
         - COPY --from=ghcr.io/ublue-os/config:latest /rpms/ublue-os-udev-rules.noarch.rpm /
         - COPY --from=ghcr.io/ublue-os/config:latest /rpms/ublue-os-update-services.noarch.rpm /
         - COPY --from=ghcr.io/ublue-os/config:latest /rpms/ublue-os-signing.noarch.rpm /
         - COPY --from=ghcr.io/ublue-os/config:latest /rpms/ublue-os-luks.noarch.rpm /
-        - COPY --from=ghcr.io/ublue-os/config:latest /rpms/ublue-os-just.noarch.rpm
+        - COPY --from=ghcr.io/ublue-os/config:latest /rpms/ublue-os-just.noarch.rpm /
+        - RUN rpm-ostree install just powerstat
+
 
 
     - type: script
